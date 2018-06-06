@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<!-- I see you're a curious one. Feel free to dig around my site's code -->
+<!-- I'm a dev too, I know that Ctrl-Shift-I (Ctrl-Shift-C for Mac) is just an impulse -->
+<!-- BTW, how do you do multiline comments? This can't be the only way to do them -->
+<!-- If you do know, tell me at tejas.shah1950@gmail.com please. Thanks, bye! -->
+
+<!--
+                    ▀▀▀▀     ▀▀
+                 ▄▀▀____▀▀▀▀▄____█
+    ___________▄▀▀__▀▀▀▀▀▀▄___▀▄___█
+    __________█▄▄▄▄▄▄_______▀▄__▀▄__█
+    _________█_________▀▄______█____█_█
+    ______▄█_____________▀▄_____▐___▐_▌
+    ______██_______________▀▄___▐_▄▀▀▀▄
+    ______█________██_______▌__▐▄▀______█
+    ______█_________█_______▌__▐▐________▐
+    _____▐__________▌_____▄▀▀▀__▌_______▐_____________▄▄▄▄▄▄
+    ______▌__________▀▀▀▀________▀▀▄▄▄▀______▄▄████▓▓▓▓▓▓▓███▄
+    ______▌____________________________▄▀__▄▄█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▄
+    ______▐__________________________▄▀_▄█▓▓▓▓▓▓▓▓▓▓_____▓▓____▓▓█▄
+    _______▌______________________▄▀_▄█▓▓▓▓▓▓▓▓▓▓▓_  _▓▓_▓▓_▓▓__▓▓█
+    _____▄▀▄_________________▄▀▀▌██▓▓▓▓▓▓▓▓▓▓▓▓▓__▓▓▓_ ▓▓_ ▓▓__▓▓█
+    ____▌____▀▀▀▄▄▄▄▄▄▄▄▀▀___▌█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓__▓______  ▓▓___▓▓▓█
+    _____▀▄_________________▄▀▀▓▓▓▓▓▓▓▓█████████████▄▄__ _▓▓__▓▓▓█
+    _______█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▄▄___▓▓▓▓▓▓▓▓▓█
+    _______█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▓███▓▓▓▓████▓▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓█
+    ________█▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓█▓▓██░░███████░██▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▓█
+    ________█▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓░░░░░█░░░░░██░░░░██▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▌
+    ________█▓▓▓▓▓▓▓▓▓▓▓▓▓▓███░░░░░░░░____░██░░░░░░░██▓▓▓▓▓▓▓██▓▓▌
+    ________▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓██░░░░░░░________░░░░░░░░░██████▓▓▓▓▓█▓▌
+    ________▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓██░░░░░░___▓▓▓▓▓░░░░░░░███░░███▓▓▓▓▓█▓▌
+    _________█▓▓▓▓▓▓▓▓▓▓▓▓▓██░░░░░___▓▓█▄▄▓░░░░░░░░___░░░░█▓▓▓▓▓█▓▌
+    _________█▓▓▓▓▓▓▓▓▓▓▓▓▓█░░█░░░___▓▓██░░░░░░░░▓▓▓▓__░░░░█▓▓▓▓██
+    _________█▓▓▓▓▓▓▓▓▓▓▓▓▓█░███░░____▓░░░░░░░░░░░█▄█▓__░░░░█▓▓█▓█
+    _________▐▓▓▓▓▓▓▓▓▓▓▓▓▓█░█████░░░░░░░░░░░░░░░░░█▓__░░░░███▓█
+    __________█▓▓▓▓▓▓▓▓▓▓▓▓█░░███████░░░░░░░░░░░░░░░▓_░░░░░██▓█
+    __________█▓▓▓▓▓▓▓▓▓▓▓▓█░░░███████░░░░░░░░░░░░░░_░░░░░██▓█
+    __________█▓▓▓▓▓▓▓▓▓▓▓▓█░░░███████░░░░░░░░░░░░░░░░░░░██▓█
+    ___________█▓▓▓▓▓▓▓▓▓▓▓▓█░░░░███████░░░░░░░░░░░█████░██░░░
+    ___________█▓▓▓▓▓▓▓▓▓▓▓▓█░░░░░░__███████░░░░░███████░░█░░░░
+    ___________█▓▓▓▓▓▓▓▓▓▓▓▓█░░░░░░█▄▄▄▀▀▀▀████████████░░█░░░░
+    ___________▐▓▓▓▓▓▓▓▓▓▓▓▓█░░░░░░██████▄__▀▀░░░███░░░░░█░░░
+    ___________▐▓▓▓▓▓▓▓▓▓▓▓█▒█░░░░░░▓▓▓▓▓███▄░░░░░░░░░░░░░░░______▄▄▄
+    ___________█▓▓▓▓▓▓▓▓▓█▒▒▒▒█░░░░░░▓▓▓▓▓█░░░░░░░░░░░░░░░▄▄▄_▄▀▀____▀▄
+    __________█▓▓▓▓▓▓▓▓▓█▒▒▒▒█▓▓░░░░░░░░░░░░░░░░░░░░░____▄▀____▀▄_________▀▄
+    _________█▓▓▓▓▓▓▓▓▓█▒▒▒▒█▓▓▓▓░░░░░░░░░░░░░░░░░______▐▄________█▄▄▀▀▀▄__█
+    ________█▓▓▓▓▓▓▓▓█▒▒▒▒▒▒█▓▓▓▓▓▓▓░░░░░░░░░____________█_█______▐_________▀▄▌
+    _______█▓▓▓▓▓▓▓▓█▒▒▒▒▒▒███▓▓▓▓▓▓▓▓▓▓▓█▒▒▄___________█__▀▄____█____▄▄▄____▐
+    ______█▓▓▓▓▓▓▓█_______▒▒█▒▒██▓▓▓▓▓▓▓▓▓▓█▒▒▒▄_________█____▀▀█▀▄▀▀▀___▀▀▄▄▐
+    _____█▓▓▓▓▓██▒_________▒█▒▒▒▒▒███▓▓▓▓▓▓█▒▒▒██________▐_______▀█_____________█
+    ____█▓▓████▒█▒_________▒█▒▒▒▒▒▒▒▒███████▒▒▒▒██_______█_______▐______▄▄▄_____█
+    __█▒██▒▒▒▒▒▒█▒▒____▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒____▒█▓█__▄█__█______▀▄▄▀▀____▀▀▄▄█
+    __█▒▒▒▒▒▒▒▒▒▒█▒▒▒████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█_______█▓▓█▓▓▌_▐________▐____________▐
+    __█▒▒▒▒▒▒▒▒▒▒▒███▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒_______█▓▓▓█▓▌__▌_______▐_____▄▄____▐
+    _█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒_____█▓▓▓█▓▓▌__▌_______▀▄▄▀______▐
+    _█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████▓▓█▓▓▓▌__▀▄_______________▄▀
+    _█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███▒▒▒▒▒▒▒██▓▓▓▓▓▌___▀▄_________▄▀▀
+    █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒▒▒▒▒▒▒▒▒▒▒▒▒█▓▓▓▓▓▀▄__▀▄▄█▀▀▀
+    █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▓▓▓▓██▄▄▄▀
+    █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████
+    █▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    _█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▄▄▄▄▄
+    _█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███▒▒▒▒▒▒██▄▄
+    __█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒███▒▒▒▒▒▒▒▒▒▒▒▒▒█▄
+    __█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    __█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒█▒▒▒▒▒▒▒▒▒██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    ___█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒█▒▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▌
+    ____█▒▒▒▒▒▒▒▒▒▒▒▒▒██▒▒▒▒▒▒▒█▒▒▒▒█▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░▒▒▌
+    ____█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█████████████▒▒▒▒▒█▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒▒░▒▌
+    _____█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█_______▐▒▒▒▒█▒▒▒▒▒▒▒░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▌
+    ______█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█________█▒▒█▒▒▒▒▒▒░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌
+    _______█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█________█▒█▒▒▒▒▒▒░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▌
+    ________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█________█▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    _________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█________█▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    _________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█________█▒▒▒░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▀
+    __________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█_______█▒░░░▒▒▒▒▒░░░░░░░░▒▒▒█▀▀▀
+    ___________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█_______█░▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░█▀
+    ____________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█_______█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▀
+    _____________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█_______█▒▒▒▒▒▒▒▒▒▒▒▒█▀
+    _____________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█_______▀▀▀███████▀▀
+    ______________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    _______________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    ________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    _________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    __________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██▒█
+    ___________________█▒▒▒▒▒▒▒▒▒▒▒▒▒██▒▒▒▒█
+    ___________________█▒▒▒▒▒▒▒▒████▒▒▒▒▒▒▒█
+    ___________________█████████▒▒▒▒▒▒▒▒▒▒▒█
+    ____________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    ____________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█
+    _____________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▌
+    _____________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▌
+    ______________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▌
+    _______________________█▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░█
+    ________________________█▒▒▒▒▒▒▒▒▒▒▒░░░█
+    __________________________██▒▒▒▒▒▒░░░█▀
+    _____________________________█░░░░░█
+-->
+
+<head>
+<meta charset="utf-8">
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<title>Gamegiver Studios</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <style>
+
+    #mycontainer {
+      min-height: 750px;
+    }
+
+    #name_container{
+      margin-right: auto;
+      margin-left: auto;
+      border:1px solid transparent ;
+      height:100px;
+      position:absolute ;
+      top:290px;
+      left:503px;
+    }
+
+    p{
+      width:10px;
+      height:10px;
+      border:1px solid black;
+      border-radius:3px;
+      position:absolute ;
+      background: #ffffff;
+    }
+
+  </style>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/5a7dc536d7591465c707876e/default';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+</head>
+
+<body onload="return ran_col()">
+
+<!-- header section -->
+<section id="mycontainer">
+  <header id="header">
+    <!-- navigation section  -->
+    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/Gamegiver_Studios_Logo.png" width="150" height="100" alt="Mafolio"></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://github.com/Spyninja3000">Github</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+    <!-- navigation section  -->
+  </header>
+
+  <!-- banner text -->
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="banner-text text-center">
+        <h1>Hey, I'm _____</h1>
+        <div id="name_container"></div>
+        <script src="./js/name_prework.js"></script>
+        <script src="./js/assemble_name.js"></script>
+        <br>
+        <h6>Looking for a young game developer?<br>
+          Scroll down to see my work.</h6>
+        <!-- banner text -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- randomly chooses background color - pretty excited about this feature!!! -->
+<script type="text/javascript">
+    function ran_col() { //function name
+      var color = '#'; // hexadecimal starting symbol
+      var letters = ['0000ff', '990099', '006600', 'cc9900', '000066', '800000', 'cc0066', 'ff9933', '339933', '999966', '3399ff', '006699', '00cc99', '9966ff', 'cc6600', '666633', '00ff99', '0066ff', 'b30000', '999900', '00cc66', '6666ff', 'cc0052', 'cc0000', '446600', '993366'];
+      color += letters[Math.floor(Math.random() * letters.length)];
+      document.getElementById('mycontainer').style.background = color;
+    }
+</script>
+
+<!-- header section --> 
+<!-- description text section -->
+<section id="descripton" class="section descripton">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1 text-center">
+      <h6>I am a 15 year old Video Game Designer and Programmer with beginner/intermediate skills in both fields. I am currently searching for any computer science/game development internships right now, so my skills are up for grabs. I use Unity and The Games Factory 2 to build my video games. I am proficient in Python and HTML/CSS, and a beginner in Java/C/C#. Please send any internship offers my way, and thank you for visiting my site!</h6>
+    </div>
+  </div>
+</section>
+<!-- description text section --> 
+<!-- portfolio section -->
+<section id="works" class="works section no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://drive.google.com/open?id=0B5kh0xn3WtUXTXdYeUs0V2xSWWM" class="work-box"> <img src="images/Legendaria_new_new.png" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Legendaria</h5>
+            <h6>RPG</h6>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://drive.google.com/open?id=0B5kh0xn3WtUXdzctSVpjRzdmMG8" class="work-box"> <img src="images/Exalm_Logo_new_new.png" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Exalm</h5>
+            <h6>RPG</h6>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/coming_soon.jpg" class="work-box"> <img src="images/coming_soon.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Coming Soon</h5>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/coming_soon.jpg" class="work-box"> <img src="images/coming_soon.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Coming Soon</h5>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/coming_soon.jpg" class="work-box"> <img src="images/coming_soon.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Coming Soon</h5>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/coming_soon.jpg" class="work-box"> <img src="images/coming_soon.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Coming Soon</h5>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/coming_soon.jpg" class="work-box"> <img src="images/coming_soon.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Coming Soon</h5>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/coming_soon.jpg" class="work-box"> <img src="images/coming_soon.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Coming Soon</h5>
+          </div>
+        </div>
+        <!-- overlay --> 
+        </a> </div>
+    </div>
+  </div>
+</section>
+<!-- portfolio section --> 
+<!-- hire me section -->
+<section id="hireme" class="section hireme">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h3>Got an internship/job for me?</h3>
+      <h6>Feel free to let me know..</h6>
+      <a href="contact.html" class="btn btn-large">Intern/Hire me</a> </div>
+      <script type="text/javascript">
+        //color_btn();
+      </script>
+  </div>
+</section>
+<!-- hire me section --> 
+<!-- footer -->
+<footer class="section footer">
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="col-md-12">
+        <ul class="footer-share">
+          <li><a href="https://github.com/Spyninja3000"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.instagram.com/tejasshah_3/?hl=en"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://plus.google.com/113467773294015956554"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+        <h6>
+        <br>© 2017 All Rights Reserved<br>
+          Created by Tejas Shah. Template by DesignStub.</h6>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer --> 
+
+<!-- JS FILES --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.fancybox.pack.js"></script> 
+<script src="js/jquery.waypoints.min.js"></script> 
+<script src="js/retina.min.js"></script> 
+<script src="js/modernizr.js"></script> 
+<script src="js/main.js"></script>
+</body>
+</html>
