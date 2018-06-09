@@ -143,6 +143,17 @@
       background: #ffffff;
     }
 
+    @media screen and (min-width: 0px) and (max-width: 970px) {
+      #div-mobile {    display: block;  }
+      #div-desktop {    display: none;  }
+    }
+
+    @media screen and (min-width: 971px) and (max-width: 3000px) {
+      #div-mobile {    display: none;  }
+      #div-desktop {    display: block;  }
+
+    }
+
   </style>
 
   <!--Start of Tawk.to Script-->
@@ -184,11 +195,19 @@
   <div class="container">
     <div class="col-md-10 col-md-offset-1">
       <div class="banner-text text-center">
-        <h1>Hey, I'm _____</h1>
-        <div id="name_container"></div>
-        <script src="./js/name_prework.js"></script>
-        <script src="./js/assemble_name.js"></script>
-        <br>
+
+        <div id="div-mobile">
+          <h1>Hey, I'm Tejas</h1>
+        </div>
+
+        <div id="div-desktop">
+          <h1>Hey, I'm _____</h1>
+          <div id="name_container"></div>
+          <script src="./js/name_prework.js"></script>
+          <script src="./js/assemble_name.js"></script>
+          <br>
+        </div>
+
         <h6>Looking for a young game developer?<br>
           Scroll down to see my work.</h6>
         <!-- banner text -->
