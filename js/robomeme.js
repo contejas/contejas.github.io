@@ -200,6 +200,6 @@ let images = [
 ];
 
 var randomImage = images[Math.floor(Math.random() * images.length)];
-document.write("<style>img {width: 800px; height: 2000px; object-fit: contain}</style>");
+document.write("<style>img {width: 800px; height: 700px; object-fit: contain}</style>");
 document.write(randomImage);
 //window.setTimeout("document.getElementById('meme').style.display='none';", 5000);

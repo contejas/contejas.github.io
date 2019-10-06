@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/robomeme.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/robomeme.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +104,7 @@
       <workItem from="1549818155829" duration="780000" />
       <workItem from="1552527173705" duration="877000" />
       <workItem from="1570392710142" duration="3021000" />
+      <workItem from="1570400960463" duration="196000" />
     </task>
     <servers />
   </component>
@@ -115,7 +116,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
