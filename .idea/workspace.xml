@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="change me sum more">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/robomeme.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/robomeme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memetester.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,6 @@
   <component name="ProjectId" id="1RqRagbvgipp9WkrcAR8hUdRjXj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -60,18 +60,6 @@
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -114,7 +102,9 @@
       <workItem from="1578520379338" duration="3839000" />
       <workItem from="1578528170046" duration="297000" />
       <workItem from="1580523871540" duration="648000" />
-      <workItem from="1584367737235" duration="260000" />
+      <workItem from="1584367737235" duration="2261000" />
+      <workItem from="1584543078377" duration="129000" />
+      <workItem from="1591037116096" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
@@ -127,20 +117,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change me sum more" />
@@ -155,17 +144,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="403" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578528251798" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1580527526980">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1584543218565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580527526980" />
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584543218565" />
     <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1578528258844">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578528258844" />
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584367737266">
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584543110612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584367737266" />
+    <state x="477" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584543110612" />
   </component>
 </project>
