@@ -4,7 +4,6 @@
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="change me sum more">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memetester.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Personal" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,7 +46,7 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.memetester.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/index.html">
       <method v="2" />
     </configuration>
@@ -56,8 +55,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.memetester.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.memetester.html" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +103,9 @@
       <workItem from="1580523871540" duration="648000" />
       <workItem from="1584367737235" duration="2261000" />
       <workItem from="1584543078377" duration="129000" />
-      <workItem from="1591037116096" duration="375000" />
+      <workItem from="1591037116096" duration="1129000" />
+      <workItem from="1591070439453" duration="636000" />
+      <workItem from="1606758976197" duration="2560000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
@@ -136,22 +137,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="change me sum more" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="520" y="223" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578522140011">
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1591070463731">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="520" y="223" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1578522140011" />
-    <state x="403" y="12" key="CommitChangelistDialog2" timestamp="1578528251798">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="403" y="12" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1578528251798" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1584543218565">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584543218565" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1578528258844">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1578528258844" />
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591070463731" />
     <state x="477" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584543110612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
