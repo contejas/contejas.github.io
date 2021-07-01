@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
+      <change afterPath="$PROJECT_DIR$/cMyHealth-Poster.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/cmyhealth-resize.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -28,10 +30,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -42,6 +45,10 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/js" />
     </key>
@@ -60,6 +67,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -110,6 +118,9 @@
       <workItem from="1607103691591" duration="53000" />
       <workItem from="1613597480423" duration="108000" />
       <workItem from="1613597681445" duration="36000" />
+      <workItem from="1624669709780" duration="100000" />
+      <workItem from="1624669873532" duration="10000" />
+      <workItem from="1625116667291" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
@@ -129,7 +140,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -147,19 +158,5 @@
     <MESSAGE value="change me sum more" />
     <MESSAGE value="foodfinder stuff again" />
     <option name="LAST_COMMIT_MESSAGE" value="foodfinder stuff again" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1606767206348">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1606767206348" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607103745360">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1607103745360" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606767213508">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.5.1920.1040@0.0.1536.824" timestamp="1606767213508" />
   </component>
 </project>
