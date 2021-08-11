@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
-      <change afterPath="$PROJECT_DIR$/images/new_pfp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/new_favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
@@ -35,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,8 +47,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
@@ -125,6 +125,7 @@
       <workItem from="1625116667291" duration="761000" />
       <workItem from="1626289146397" duration="82000" />
       <workItem from="1628704415633" duration="2153000" />
+      <workItem from="1628707120723" duration="162000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
