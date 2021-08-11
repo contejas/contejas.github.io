@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
-      <change afterPath="$PROJECT_DIR$/cMyHealth-Poster.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/cmyhealth-resize.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/new_pfp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +51,7 @@
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
@@ -121,6 +123,8 @@
       <workItem from="1624669709780" duration="100000" />
       <workItem from="1624669873532" duration="10000" />
       <workItem from="1625116667291" duration="761000" />
+      <workItem from="1626289146397" duration="82000" />
+      <workItem from="1628704415633" duration="2153000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
