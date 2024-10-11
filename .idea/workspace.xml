@@ -4,6 +4,7 @@
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +148,10 @@
       <workItem from="1672980741014" duration="5126000" />
       <workItem from="1723839556059" duration="2075000" />
       <workItem from="1723847806446" duration="2090000" />
+      <workItem from="1723862484714" duration="637000" />
+      <workItem from="1723872686610" duration="117000" />
+      <workItem from="1728502802726" duration="5000" />
+      <workItem from="1728672243187" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
