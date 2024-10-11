@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+
+<head>
+<meta charset="utf-8">
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<title>Shah Prasanna Technologies</title>
+<link rel="shortcut icon" href="/sp_favicon.ico" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <style>
+
+    #mycontainer {
+      min-height: 750px;
+    }
+
+    #name_container{
+      margin-right: auto;
+      margin-left: auto;
+      border:1px solid transparent ;
+      height:100px;
+      position:absolute ;
+      top:290px;
+      left:503px;
+    }
+
+    p{
+      width:10px;
+      height:10px;
+      border:1px solid black;
+      border-radius:3px;
+      position:absolute ;
+      background: #ffffff;
+    }
+
+    @media screen and (max-width: 965px) {
+      #div-mobile {    display: block;  }
+      #div-desktop {    display: none;  }
+    }
+
+    @media screen and (min-width: 966px) {
+      #div-mobile {    display: none;  }
+      #div-desktop {    display: block;  }
+
+    }
+
+  </style>
+
+</head>
+
+<body onload="return ran_col()">
+
+<!-- header section -->
+<section id="mycontainer">
+  <header id="header">
+    <!-- navigation section  -->
+    <div class="header-content clearfix"> <a class="logo" href="#"><img src="images/ShahPrasannaLogo.png" width="75" height="75" alt="Mafolio"></a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+          <li><a href="index.html">Tejas Shah</a></li>
+          <li><a href="https://www.linkedin.com/in/sid-prasanna-72406a284/">Sid Prasanna</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+    <!-- navigation section  -->
+  </header>
+
+  <!-- banner text -->
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="banner-text text-center">
+
+        <div id="div-mobile">
+          <h1>Shah Prasanna Technologies</h1>
+        </div>
+
+        <div id="div-desktop">
+          <h1>Shah Prasanna Technologies</h1>
+          <div id="name_container"></div>
+          <!-- script src="./js/name_prework.js"></script>
+          <script src="js/mr_stark_i_feel_better_now.js"></script -->
+          <br>
+        </div>
+
+        <h6>We build customized web applications and technical solutions <br>
+          to set your organization up for success</h6>
+        <!-- banner text -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- randomly chooses background color - pretty excited about this feature!!! -->
+<script type="text/javascript">
+
+    function ran_col() { //function name
+      //var color = '#'; // hexadecimal starting symbol
+      //var letters = ['0000ff', '990099', '006600', 'cc9900', '000066', '800000', 'cc0066', 'ff9933', '339933', '999966', '3399ff', '006699', '00cc99', '9966ff', 'cc6600', '666633', '0066ff', 'b30000', '999900', '00cc66', '6666ff', 'cc0052', 'cc0000', '446600', '993366'];
+      //color += letters[Math.floor(Math.random() * letters.length)];
+      color = "#16537e";
+      document.getElementById('mycontainer').style.background = color;
+      $('.btn').css({"background-color":color});
+      $('.btn:hover').css({"background-color":'#3d3d3d'});
+      $('.btn:focus').css({"background-color":'#3d3d3d'});
+      $('.custom-link').css({"color":color});
+      var transparent = "#" + color.slice(1,7) + "CC";
+      $('.work .overlay').css({"background":transparent});
+    }
+</script>
+
+<!-- header section -->
+<!-- description text section -->
+<section id="descripton" class="section descripton">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1 text-center">
+      <h6>Hello there! We are Shah Prasanna Technologies, a software and IT consulting organization created by two Georgia Tech students to be able to apply our technical expertise to our local community.</h6>
+      <br>
+      <h6>We work to help small businesses in the Atlanta area harness the power of technology to manage the data that is crucial to their success. Specifically, we are able to build customized web applications from the ground up, tailor made to your current business process so that it is as seamless as possible to transition. We excel at taking "old-school" paper form or spreadsheet-based processes and turning them into efficient applications that are simple and easy to use.</h6>
+      <br>
+      <h6>For all business inquiries, please reach out to <a href="mailto:tejas.shah1950@gmail.com?Subject=Software%20Project" target="_top" class="custom-link">Tejas Shah (tejas.shah1950@gmail.com)</a>. Thank you!</h6>
+    </div>
+  </div>
+</section>
+<!-- description text section -->
+<!-- portfolio section -->
+<section id="works" class="works section no-padding">
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="shah-prasanna-technologies.html" class="work-box"> <img src="images/legal_case_mg.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Legal Case Management System</h5>
+            <h6>Currently working on a six month software project</h6>
+            <h6>to create a legal case management system for a law firm</h6>
+            <h6>that increases case handling volume by 40%</h6>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://get720fitga.com/720fitness" class="work-box"> <img src="images/720fit_620x413.jpg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Gym Website and Check-In Process</h5>
+            <h6>Assisted in website creation/hosting as well as</h6>
+            <h6>an automated tag-based gym check-in process</h6>
+            <h6>for 720 Fitness in Norcross, GA</h6>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://www.universe.com/users/shah-prasanna-technologies-8FX50M" class="work-box"> <img src="images/icgt_board_620_413.png" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Event Ticketing Portal</h5>
+            <h6>Set up ticketing portal and integrated custom special</h6>
+            <h6>discount and access codes to allow for tiered ticketing</h6>
+            <h6>and VIP entrance to collegiate dance competition event</h6>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://epyxteambuilding.com/" download class="work-box"> <img src="images/epyx_620_413.png" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Executive Coaching Website</h5>
+            <h6>Created professional website for EPYX Coaching</h6>
+            <h6>to allow for easy client intake and retention</h6>
+          </div>
+        </div>
+        <!-- overlay -->
+        </a> </div>
+      <!--div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://sites.gatech.edu/medicalroboticsclub/" class="work-box"> <img src="images/mrc_620_413.png" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>Humanoid Robotics Challenge</h5>
+            <h6>Robotics Project associated with the GT Medical Robotics Group to create</h6>
+            <h6>a bipedal walking robot using advanced motor control such as PID and Motion Profiling</h6>
+          </div>
+        </div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://devpost.com/software/brakewizard" class="work-box"> <img src="images/bw_620_413.png" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>BrakeWizard</h5>
+            <h6>HackGT Divisional 1st Place Project centered around creating</h6>
+            <h6>an automated roller skate brake using Arduino and Android Studio</h6>
+          </div>
+        </div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="https://github.com/RoboLions/1261-scouting-app" class="work-box"> <img src="images/robolions_1_620x413.jpeg" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>1261 Scouting Application</h5>
+            <h6>Used by FRC Team 1261 "Robo Lions" to effectively collect and analyze robot data </h6>
+          </div>
+        </div>
+        </a> </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="cMyHealth-Poster.pdf" class="work-box"> <img src="images/cmyhealth-resize.png" width="250" height="200" alt="">
+        <div class="overlay">
+          <div class="overlay-caption">
+            <h5>cMyHealth</h5>
+            <h6>A Centralized Electronic Medical Records System utilizing cloud data storage and NFC wireless technology</h6>
+          </div>
+        </div>
+        </a> </div-->
+    </div>
+  </div>
+</section>
+<!-- portfolio section -->
+<!-- hire me section -->
+<section id="hireme" class="section hireme">
+  <div class="container">
+    <div class="col-md-8 col-md-offset-2 text-center">
+      <h3>Have a project proposal or a software need?</h3>
+      <a href="contact.html" class="btn btn-large">Contact Us</a> </div>
+      <script type="text/javascript">
+        //color_btn();
+      </script>
+  </div>
+</section>
+<!-- hire me section -->
+<!-- footer -->
+<footer class="section footer">
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="col-md-12">
+        <ul class="footer-share">
+          <li><a href="https://github.com/contejas"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://www.instagram.com/contejas58/?hl=en"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://plus.google.com/113467773294015956554"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/tejasshah1950/"><i class="fa fa-linkedin"></i></a> </li>
+        </ul>
+        <h6> <br>Created by Tejas Shah <br>Template by DesignStub </h6>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer -->
+
+<!-- JS FILES -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

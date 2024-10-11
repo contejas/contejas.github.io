@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
+      <change afterPath="$PROJECT_DIR$/images/720fit_620x413.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ShahPrasannaLogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/epyx_620_413.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icgt_board_620_413.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/legal_case_mg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shah-prasanna-technologies.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sp_favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +36,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tejas/Documents/GitHub/contejas.github.io/images&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tejas/Documents/GitHub/contejas.github.io/images"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
@@ -42,14 +50,18 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.shah-prasanna-technologies.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/index.html">
       <method v="2" />
     </configuration>
     <configuration name="memetester.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/memetester.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="shah-prasanna-technologies.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/shah-prasanna-technologies.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -76,8 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scratch" />
+        <item itemvalue="JavaScript Debug.shah-prasanna-technologies.html" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Python.scratch" />
         <item itemvalue="JavaScript Debug.memetester.html" />
       </list>
     </recent_temporary>
@@ -152,6 +165,7 @@
       <workItem from="1723872686610" duration="117000" />
       <workItem from="1728502802726" duration="5000" />
       <workItem from="1728672243187" duration="10000" />
+      <workItem from="1728682108759" duration="5794000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
