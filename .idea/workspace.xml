@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
+      <change afterPath="$PROJECT_DIR$/newsletter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newsletters/newsletter-1.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,29 +32,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tejas/Downloads&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/tejas/Documents/GitHub/contejas.github.io/newsletters"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\newsletters" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\newsletters" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.sorter">
+  <component name="RunManager" selected="JavaScript Debug.newsletter.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/index.html">
       <method v="2" />
     </configuration>
-    <configuration name="memetester.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/memetester.html" useBuiltInWebServerPort="true">
+    <configuration name="newsletter.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletter.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="shah-prasanna-technologies.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/shah-prasanna-technologies.html" useBuiltInWebServerPort="true">
@@ -101,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.newsletter.html" />
         <item itemvalue="Python.sorter" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.shah-prasanna-technologies.html" />
         <item itemvalue="Python.scratch" />
-        <item itemvalue="JavaScript Debug.memetester.html" />
       </list>
     </recent_temporary>
   </component>
@@ -185,6 +194,8 @@
       <workItem from="1737336547012" duration="2498000" />
       <workItem from="1748225123326" duration="1163000" />
       <workItem from="1750103909635" duration="118000" />
+      <workItem from="1753377840325" duration="677000" />
+      <workItem from="1753632834219" duration="3405000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
