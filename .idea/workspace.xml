@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
-      <change afterPath="$PROJECT_DIR$/newsletter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newsletters/newsletter-1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/thomas_620x413.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter.html" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +36,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tejas/Documents/GitHub/contejas.github.io/newsletters"
+    "last_opened_file_path": "C:/Users/tejas/Documents/GitHub/contejas.github.io/images"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\newsletters" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\newsletters" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -111,8 +109,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.newsletter.html" />
-        <item itemvalue="Python.sorter" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Python.sorter" />
         <item itemvalue="JavaScript Debug.shah-prasanna-technologies.html" />
         <item itemvalue="Python.scratch" />
       </list>
@@ -195,7 +193,7 @@
       <workItem from="1748225123326" duration="1163000" />
       <workItem from="1750103909635" duration="118000" />
       <workItem from="1753377840325" duration="677000" />
-      <workItem from="1753632834219" duration="3405000" />
+      <workItem from="1753632834219" duration="8670000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
