@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
-      <change afterPath="$PROJECT_DIR$/images/thomas_620x413.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +191,7 @@
       <workItem from="1750103909635" duration="118000" />
       <workItem from="1753377840325" duration="677000" />
       <workItem from="1753632834219" duration="8983000" />
-      <workItem from="1753735511037" duration="67000" />
+      <workItem from="1753735511037" duration="479000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
