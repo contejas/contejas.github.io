@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Newsletter 8 - TS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px; /* keeps it smaller on big screens */
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        #myPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            max-width: 600px; /* bigger popup */
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border: 1px solid black;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        #myPopup h2 {
+            font-size: 1.4rem; /* bigger text */
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        #myPopup a {
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        #myPopup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hello there!</h2>
+    <h2>I have decided to do my newsletter in a video format this time around.</h2>
+    <h2>Hopefully you find it entertaining and informative!</h2>
+
+    <video controls autoplay>
+        <source src="https://shattereddisk.github.io/rickroll/rickroll.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="myPopup">
+        <h2>LOLLLLL To read the actual newsletter click
+            <a href="./newsletter-8.pdf">here</a>
+        </h2>
+    </div>
+
+    <script>
+    window.onload = function() {
+        setTimeout(showPopup, 8000);
+    };
+
+    function showPopup() {
+        document.getElementById('myPopup').style.display = 'block';
+    }
+    </script>
+</body>
+</html>
