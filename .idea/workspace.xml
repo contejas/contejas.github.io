@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
+      <change afterPath="$PROJECT_DIR$/newsletters/newsletter-13.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/newsletter.html" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter.html" afterDir="false" />
     </list>
@@ -44,13 +45,13 @@
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\newsletters" />
       <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io\images" />
-      <recent name="C:\Users\tejas\Documents\GitHub\contejas.github.io" />
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.newsletter8pdf.html">
+  <component name="RunManager" selected="JavaScript Debug.newsletter.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/index.html">
       <method v="2" />
     </configuration>
@@ -87,8 +88,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.newsletter8pdf.html" />
         <item itemvalue="JavaScript Debug.newsletter.html" />
+        <item itemvalue="JavaScript Debug.newsletter8pdf.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Python.sorter" />
         <item itemvalue="JavaScript Debug.shah-prasanna-technologies.html" />
@@ -187,6 +188,7 @@
       <workItem from="1759438156877" duration="132000" />
       <workItem from="1759886608040" duration="166000" />
       <workItem from="1761425407871" duration="146000" />
+      <workItem from="1761790739859" duration="1140000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
