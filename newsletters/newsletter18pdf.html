@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Newsletter 18 - Multiplication Challenge</title>
+
+<style>
+  body{
+    margin:0;
+    background:#ffffff;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:#0a2540;
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+  }
+
+  .container{
+    width:100%;
+    max-width:900px;
+  }
+
+  .timer{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin-bottom:10px;
+  }
+
+  h1{
+    margin:0;
+    font-size:26px;
+    letter-spacing:-0.02em;
+  }
+
+  .subtitle{
+    color:#425466;
+    margin:6px 0 28px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px 24px;
+  }
+
+  .row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 12px;
+    border-bottom:1px solid #e6ebf1;
+  }
+
+  .problem{
+    font-size:18px;
+  }
+
+  input{
+    width:60px;
+    padding:6px;
+    font-size:15px;
+    text-align:center;
+    border-radius:6px;
+    border:1px solid #d0d7e2;
+  }
+
+  input:focus{
+    outline:none;
+    border-color:#0a2540;
+  }
+
+  input:disabled{
+    background:#f6f9fc;
+    color:#6b7c93;
+  }
+
+  .status{
+    width:30px;
+    text-align:right;
+    font-size:14px;
+  }
+
+  .correct{ color:#057a55; }
+  .wrong{ color:#c53030; }
+
+  .actions{
+    display:flex;
+    gap:12px;
+    margin-top:18px;
+  }
+
+  button{
+    background:#f6f9fc;
+    border:1px solid #d0d7e2;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+  }
+
+  button:hover{
+    background:#edf2f7;
+  }
+
+  .secret{
+    display:none;
+    margin-top:24px;
+    padding:20px 24px;
+    background:#f6f9fc;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+  }
+
+  .secret a{
+    display:inline-block;
+    margin-top:8px;
+    color:#0a2540;
+    font-weight:700;
+    text-decoration:none;
+    border-bottom:1px solid #0a2540;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- TIMER -->
+  <div id="timer" class="timer">00:00.0</div>
+
+  <h1>Newsletter 18 - Multiplication Challenge</h1>
+  <p class="subtitle">
+    Solve all 20 problems correctly to unlock the newsletter! Work as quick as you can!
+  </p>
+
+  <!-- PROBLEMS -->
+  <div id="problems" class="grid"></div>
+
+  <!-- CONTROLS -->
+  <div class="actions">
+    <button id="checkAll">Check all</button>
+    <button id="shuffle">New set</button>
+  </div>
+
+  <!-- SECRET -->
+  <div id="secret" class="secret">
+    Challenge completed in <span id="finalTime"></span><br><br>
+    <a href="./newsletter-18.pdf" target="_blank">
+      Continue to the Newsletter →
+    </a>
+  </div>
+
+</div>
+
+<script>
+(function(){
+
+  // ---------- TIMER ----------
+  const timerEl = document.getElementById("timer");
+  const finalTimeEl = document.getElementById("finalTime");
+
+  let startTime = performance.now();
+  let timerInterval = null;
+  let stopped = false;
+
+  function formatTime(ms){
+    const total = ms / 1000;
+    const mins = Math.floor(total / 60);
+    const secs = Math.floor(total % 60);
+    const tenths = Math.floor((ms % 1000) / 100);
+    return `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}.${tenths}`;
+  }
+
+  function startTimer(){
+    startTime = performance.now();
+    timerInterval = setInterval(()=>{
+      if(!stopped){
+        const t = performance.now() - startTime;
+        timerEl.textContent = formatTime(t);
+      }
+    },100);
+  }
+
+  function stopTimer(){
+    stopped = true;
+    clearInterval(timerInterval);
+    finalTimeEl.textContent = timerEl.textContent;
+  }
+
+  // ---------- QUIZ ----------
+  const COUNT = 20;
+  const min = 1, max = 9;
+
+  const grid = document.getElementById("problems");
+  const secret = document.getElementById("secret");
+  const checkBtn = document.getElementById("checkAll");
+  const shuffleBtn = document.getElementById("shuffle");
+
+  let items = [];
+  const rand = (a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+
+  function generate(){
+    items = [];
+    for(let i=0;i<COUNT;i++){
+      items.push({
+        a: rand(min,max),
+        b: rand(min,max),
+        correct:false
+      });
+    }
+  }
+
+  function render(){
+    grid.innerHTML="";
+    items.forEach((it,i)=>{
+      const row=document.createElement("div");
+      row.className="row";
+
+      const p=document.createElement("div");
+      p.className="problem";
+      p.textContent=`${it.a} × ${it.b}`;
+
+      const input=document.createElement("input");
+      input.type="number";
+      input.inputMode="numeric";
+
+      input.addEventListener("keydown",e=>{
+        if(e.key==="Enter"){
+          checkOne(i);
+          focusNext(i);
+        }
+      });
+
+      const status=document.createElement("div");
+      status.className="status";
+
+      row.append(p,input,status);
+      grid.appendChild(row);
+    });
+
+    hideSecret();
+  }
+
+  function checkOne(i){
+    const row = grid.children[i];
+    const input = row.querySelector("input");
+    const status = row.querySelector(".status");
+
+    const correct = Number(input.value) === items[i].a * items[i].b;
+
+    if(correct){
+      items[i].correct = true;
+      status.textContent="✓";
+      status.className="status correct";
+      input.disabled=true;
+    } else{
+      items[i].correct = false;
+      status.textContent="✗";
+      status.className="status wrong";
+    }
+
+    revealIfDone();
+  }
+
+  function focusNext(i){
+    for(let j=i+1;j<COUNT;j++){
+      const input = grid.children[j].querySelector("input");
+      if(!input.disabled){
+        input.focus();
+        return;
+      }
+    }
+  }
+
+  function revealIfDone(){
+    if(items.every(x=>x.correct)){
+      stopTimer();
+      secret.style.display="block";
+    }
+  }
+
+  function hideSecret(){
+    secret.style.display="none";
+  }
+
+  function checkAll(){
+    for(let i=0;i<COUNT;i++) checkOne(i);
+  }
+
+  shuffleBtn.addEventListener("click",()=>{
+    clearInterval(timerInterval);
+    stopped=false;
+    timerEl.textContent="00:00.0";
+    startTimer();
+    generate();
+    render();
+  });
+
+  checkBtn.addEventListener("click",checkAll);
+
+  // INIT
+  startTimer();
+  generate();
+  render();
+
+})();
+</script>
+
+</body>
+</html>

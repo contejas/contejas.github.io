@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
-      <change afterPath="$PROJECT_DIR$/newsletters/newsletter-18.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newsletters/newsletter18pdf.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsletter.html" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,17 +50,17 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.newsletter.html">
+  <component name="RunManager" selected="JavaScript Debug.newsletter18pdf.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="newsletter18pdf.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletters/newsletter18pdf.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="newsletter8pdf.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletters/newsletter8pdf.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="newsletter.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletter.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="shah-prasanna-technologies.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/shah-prasanna-technologies.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="sorter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -88,11 +87,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.newsletter18pdf.html" />
         <item itemvalue="JavaScript Debug.newsletter.html" />
         <item itemvalue="JavaScript Debug.newsletter8pdf.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Python.sorter" />
-        <item itemvalue="JavaScript Debug.shah-prasanna-technologies.html" />
       </list>
     </recent_temporary>
   </component>
@@ -193,6 +192,7 @@
       <workItem from="1763686048427" duration="1226000" />
       <workItem from="1764126681240" duration="687000" />
       <workItem from="1764811951784" duration="140000" />
+      <workItem from="1764814347718" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
