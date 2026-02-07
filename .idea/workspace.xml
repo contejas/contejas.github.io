@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
+      <change afterPath="$PROJECT_DIR$/newsletters/newsletter25pdf.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +51,14 @@
       <recent name="$PROJECT_DIR$/js" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.newsletter18pdf.html">
+  <component name="RunManager" selected="JavaScript Debug.newsletter25pdf.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/index.html">
       <method v="2" />
     </configuration>
     <configuration name="newsletter18pdf.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletters/newsletter18pdf.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="newsletter25pdf.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletters/newsletter25pdf.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="newsletter8pdf.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletters/newsletter8pdf.html" useBuiltInWebServerPort="true">
@@ -63,35 +67,13 @@
     <configuration name="newsletter.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/contejas.github.io/newsletter.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="sorter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="contejas.github.io" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/sorter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.newsletter25pdf.html" />
         <item itemvalue="JavaScript Debug.newsletter18pdf.html" />
         <item itemvalue="JavaScript Debug.newsletter.html" />
         <item itemvalue="JavaScript Debug.newsletter8pdf.html" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="Python.sorter" />
       </list>
     </recent_temporary>
   </component>
@@ -199,7 +181,8 @@
       <workItem from="1767836955951" duration="1318000" />
       <workItem from="1768616372536" duration="1235000" />
       <workItem from="1769050637668" duration="1295000" />
-      <workItem from="1770255811485" duration="595000" />
+      <workItem from="1770255811485" duration="730000" />
+      <workItem from="1770431967932" duration="2838000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>

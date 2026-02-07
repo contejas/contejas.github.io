@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Newsletter Quiz Challenge</title>
+
+<style>
+  body{
+    margin:0;
+    background:#ffffff;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:#0a2540;
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+  }
+
+  .container{
+    width:100%;
+    max-width:900px;
+  }
+
+  .timer{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin-bottom:10px;
+  }
+
+  h1{
+    margin:0;
+    font-size:26px;
+    letter-spacing:-0.02em;
+  }
+
+  .subtitle{
+    color:#425466;
+    margin:6px 0 28px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:12px 24px;
+  }
+
+  .row{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    padding:12px;
+    border-bottom:1px solid #e6ebf1;
+  }
+
+  .problem{
+    font-size:16px;
+    line-height:1.4;
+  }
+
+  .problem a{
+    color:#0a2540;
+    font-weight:600;
+    text-decoration:none;
+    border-bottom:1px solid #0a2540;
+  }
+
+  .answerRow{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+
+  input{
+    flex:1;
+    padding:8px;
+    font-size:15px;
+    border-radius:6px;
+    border:1px solid #d0d7e2;
+  }
+
+  input:focus{
+    outline:none;
+    border-color:#0a2540;
+  }
+
+  input:disabled{
+    background:#f6f9fc;
+    color:#6b7c93;
+  }
+
+  .status{
+    width:30px;
+    text-align:right;
+    font-size:16px;
+  }
+
+  .correct{ color:#057a55; }
+  .wrong{ color:#c53030; }
+
+  .actions{
+    display:flex;
+    gap:12px;
+    margin-top:18px;
+    flex-wrap:wrap;
+  }
+
+  button{
+    background:#f6f9fc;
+    border:1px solid #d0d7e2;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+  }
+
+  button:hover{
+    background:#edf2f7;
+  }
+
+  .secret{
+    display:none;
+    margin-top:24px;
+    padding:20px 24px;
+    background:#f6f9fc;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+  }
+
+  .secret a{
+    display:inline-block;
+    margin-top:8px;
+    color:#0a2540;
+    font-weight:700;
+    text-decoration:none;
+    border-bottom:1px solid #0a2540;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- TIMER -->
+  <div id="timer" class="timer">00:00.0</div>
+
+  <h1>Newsletter Quiz Challenge</h1>
+  <p class="subtitle">
+    Answer all 5 questions correctly to unlock the newsletter!
+  </p>
+
+  <!-- QUESTIONS -->
+  <div id="questions" class="grid"></div>
+
+  <!-- CONTROLS -->
+  <div class="actions">
+    <button id="checkAll">Check all</button>
+    <button id="reset">Restart quiz</button>
+  </div>
+
+  <!-- SECRET -->
+  <div id="secret" class="secret">
+    Quiz completed in <span id="finalTime"></span><br><br>
+    <!-- Replace with your real newsletter link -->
+    <a href="./newsletter-25.pdf" target="_blank">
+      Continue to the Newsletter →
+    </a>
+  </div>
+
+</div>
+
+<script>
+(function(){
+
+  // ---------- TIMER ----------
+  const timerEl = document.getElementById("timer");
+  const finalTimeEl = document.getElementById("finalTime");
+
+  let startTime = performance.now();
+  let timerInterval = null;
+  let stopped = false;
+
+  function formatTime(ms){
+    const total = ms / 1000;
+    const mins = Math.floor(total / 60);
+    const secs = Math.floor(total % 60);
+    const tenths = Math.floor((ms % 1000) / 100);
+    return `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}.${tenths}`;
+  }
+
+  function startTimer(){
+    startTime = performance.now();
+    timerInterval = setInterval(()=>{
+      if(!stopped){
+        const t = performance.now() - startTime;
+        timerEl.textContent = formatTime(t);
+      }
+    },100);
+  }
+
+  function stopTimer(){
+    stopped = true;
+    clearInterval(timerInterval);
+    finalTimeEl.textContent = timerEl.textContent;
+  }
+
+  // ---------- QUIZ DATA ----------
+  const quiz = [
+    {
+      q: `Which basketball player reminds Kunj of the concept of Wabi Sabi (Beauty in Imperfection), as described in his <a href="https://www.canva.com/design/DAG1zZbIRMU/xyf0zZa99uNOb6oc3Lt2hA/view?utm_content=DAG1zZbIRMU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hba98dd2aa3">11/03/25 newsletter</a>?`,
+      answers: ["john wall", "john", "wall"]
+    },
+    {
+      q: `What is the name of Alejandro's new niece, as shown in his <a href="https://www.canva.com/design/DAG6X6TjLeA/MnYJEqDbAo-7tGB3H1WzyA/view?utm_content=DAG6X6TjLeA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9659a67e0e">12/06/25 newsletter</a>?`,
+      answers: ["angelina"]
+    },
+    {
+      q: `Which Georgia state representative who is currently running for Governor did Omkar canvass for in Norcross, as described in his <a href="https://www.canva.com/design/DAG5LKj_Tkg/W1s7pja1mfY0hg4k_KRCGg/view?utm_content=DAG5LKj_Tkg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h60596837d3">11/19/25 newsletter</a>?`,
+      answers: ["ruwa romman", "ruwa", "romman"]
+    },
+    {
+      q: `Which character in Guilty Gear Strive does David claim is easy to play and designed for children ages 4–7, as described in his <a href="https://www.canva.com/design/DAG-6hNbISM/cH4sopKT5JbbFwR6h2KdNg/view?utm_content=DAG-6hNbISM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=haf6eabec0b">01/20/26 newsletter</a>?`,
+      answers: ["elphelt"]
+    },
+    {
+      q: `How many shots did I miss when I tried to play basketball in Orlando after my conference had ended, as shown in my <a href="https://www.youtube.com/watch?v=IIjpKvMlwvY">10/23/25 vlog newsletter</a>?`,
+      answers: ["12", "twelve"]
+    }
+  ];
+
+  const grid = document.getElementById("questions");
+  const secret = document.getElementById("secret");
+  const checkBtn = document.getElementById("checkAll");
+  const resetBtn = document.getElementById("reset");
+
+  let state = [];
+
+  function normalize(s){
+    return s.trim().toLowerCase();
+  }
+
+  function initState(){
+    state = quiz.map(()=>({correct:false}));
+  }
+
+  function render(){
+    grid.innerHTML = "";
+
+    quiz.forEach((item, i)=>{
+      const row = document.createElement("div");
+      row.className = "row";
+
+      const p = document.createElement("div");
+      p.className = "problem";
+      p.innerHTML = item.q;
+
+      const answerRow = document.createElement("div");
+      answerRow.className = "answerRow";
+
+      const input = document.createElement("input");
+      input.type = "text";
+      input.placeholder = "Your answer";
+
+      input.addEventListener("keydown", e=>{
+        if(e.key === "Enter"){
+          checkOne(i);
+          focusNext(i);
+        }
+      });
+
+      const status = document.createElement("div");
+      status.className = "status";
+
+      answerRow.append(input, status);
+      row.append(p, answerRow);
+      grid.appendChild(row);
+    });
+
+    hideSecret();
+  }
+
+  function checkOne(i){
+    const row = grid.children[i];
+    const input = row.querySelector("input");
+    const status = row.querySelector(".status");
+
+    const val = normalize(input.value);
+    const correct = quiz[i].answers.includes(val);
+
+    if(correct){
+      state[i].correct = true;
+      status.textContent = "✓";
+      status.className = "status correct";
+      input.disabled = true;
+    } else {
+      state[i].correct = false;
+      status.textContent = "✗";
+      status.className = "status wrong";
+    }
+
+    revealIfDone();
+  }
+
+  function focusNext(i){
+    for(let j=i+1;j<quiz.length;j++){
+      const input = grid.children[j].querySelector("input");
+      if(!input.disabled){
+        input.focus();
+        return;
+      }
+    }
+  }
+
+  function revealIfDone(){
+    if(state.every(x=>x.correct)){
+      stopTimer();
+      secret.style.display = "block";
+    }
+  }
+
+  function hideSecret(){
+    secret.style.display = "none";
+  }
+
+  function checkAll(){
+    for(let i=0;i<quiz.length;i++) checkOne(i);
+  }
+
+  function resetQuiz(){
+    clearInterval(timerInterval);
+    stopped = false;
+    timerEl.textContent = "00:00.0";
+    startTimer();
+    initState();
+    render();
+  }
+
+  checkBtn.addEventListener("click", checkAll);
+  resetBtn.addEventListener("click", resetQuiz);
+
+  // INIT
+  startTimer();
+  initState();
+  render();
+
+})();
+</script>
+
+</body>
+</html>
