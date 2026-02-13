@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
-      <change afterPath="$PROJECT_DIR$/newsletters/newsletter25pdf.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +182,7 @@
       <workItem from="1769050637668" duration="1295000" />
       <workItem from="1770255811485" duration="730000" />
       <workItem from="1770431967932" duration="2838000" />
+      <workItem from="1770485058284" duration="1586000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
