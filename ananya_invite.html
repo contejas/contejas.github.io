@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mission Invitation</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Roboto:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg-dark:#030304;
+      --terminal-bg:#000;
+      --green:#39ff14;
+      --paper:#fffdf7;
+      --accent:#6a49ff;
+      --muted:#666;
+      --max-width:900px;
+    }
+    html,body{height:100%;margin:0;font-family:Roboto,system-ui,-apple-system,Segoe UI,Arial;}
+    .frame{
+      height:100vh;width:100vw;display:flex;align-items:center;justify-content:center;
+      background:var(--bg-dark);overflow:hidden;
+    }
+    .stage{
+      position:relative;width:100%;height:100%;
+    }
+    .page{
+      position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+      transition:opacity .6s ease, transform .6s ease;opacity:0;pointer-events:none;
+    }
+    .page.visible{opacity:1;pointer-events:auto}
+    /* 1. Terminal page */
+    .terminal{
+      width:min(920px,92%);max-width:var(--max-width);height:70vh;background:linear-gradient(180deg,#000,#020202);
+      border-radius:8px;padding:28px 32px;box-shadow:0 10px 40px rgba(0,0,0,.8);color:var(--green);
+      font-family:'Share Tech Mono', monospace;display:flex;flex-direction:column;justify-content:space-between;
+    }
+    .terminal .screen{
+      flex:1;overflow:auto;font-size:20px;line-height:1.5;
+    }
+    .term-title{font-weight:700;margin-bottom:12px;color:var(--green)}
+    .cursor{display:inline-block;width:12px;height:20px;background:var(--green);margin-left:6px;vertical-align:bottom;animation:blink 1s steps(1) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .center-btn{display:flex;justify-content:center;margin-top:18px}
+    .btn{
+      background:transparent;border:2px solid var(--green);color:var(--green);padding:10px 18px;border-radius:6px;
+      cursor:pointer;font-family:inherit;font-size:16px;letter-spacing:.6px;transition:transform .15s,background .15s;
+    }
+    .btn:hover{transform:translateY(-3px);background:rgba(57,255,20,0.03)}
+    /* fade overlay for transitions */
+    .fade-overlay{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .6s ease}
+    .fade-overlay.on{opacity:1;pointer-events:auto}
+    /* 2. Letter page */
+    .letter-wrap{width:min(760px,94%);max-width:760px;padding:36px;background:var(--paper);border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,.25);transform-origin:center;transition:transform .6s ease,opacity .5s ease;}
+    .letter{
+      font-family:'Dancing Script', serif;font-size:34px;color:#2b2b2b;text-align:left;line-height:1.4;padding:8px 16px;
+    }
+    .letter .meta{font-size:16px;font-family:Roboto;margin-top:12px;color:var(--muted)}
+    .accept-row{display:flex;justify-content:center;margin-top:20px}
+    .accept-btn{background:var(--accent);color:white;padding:10px 18px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+    .disclaimer{font-family:Roboto;font-size:13px;color:#555;margin-top:14px;text-align:center}
+    /* whoosh out animation */
+    .fly-right{animation:flyRight .7s ease forwards}
+    @keyframes flyRight{to{transform:translateX(120%);opacity:0}}
+    /* 3. Final page */
+    .final{
+      width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:white;
+      background:linear-gradient(180deg,#5a3df0,#7a4bff);
+    }
+    .final .agent{
+      font-family:'Share Tech Mono',monospace;font-size:40px;color:#e8e8ff;margin-bottom:12px;
+    }
+    .final .note{font-family:Roboto;width:min(640px,92%);text-align:center;font-size:18px;color:#efeefe}
+    /* small responsive tweaks */
+    @media (max-width:560px){
+      .terminal{height:75vh;padding:18px}
+      .letter{font-size:28px}
+      .final .agent{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="stage" id="stage">
+      <!-- Page 1: Terminal -->
+      <section id="page-terminal" class="page visible" aria-labelledby="term-heading">
+        <div class="terminal" role="region" aria-label="Secret mission terminal">
+          <div class="screen" id="terminal-screen">
+            <div class="term-title">SECURE LINK ESTABLISHED</div>
+            <div id="type-area"></div>
+          </div>
+
+          <div class="center-btn">
+            <button id="proceedBtn" class="btn" aria-label="Proceed to mission">Proceed -&gt;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page 2: Letter -->
+      <section id="page-letter" class="page" aria-labelledby="letter-heading">
+        <div class="letter-wrap" id="letterWrap" role="region" aria-label="Invitation letter">
+          <div class="letter" id="letter">
+            <!-- content injected by JS for nicer timing -->
+          </div>
+
+          <div class="meta" style="text-align:center">
+            <div class="accept-row">
+              <button id="acceptBtn" class="accept-btn" aria-label="Accept invitation">Accept Invitation</button>
+            </div>
+            <div class="disclaimer">If the time or place doesn't work just lmk and we'll figure it out lmao</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page 3: Finale -->
+      <section id="page-final" class="page" aria-labelledby="final-heading">
+        <div class="final" role="region" aria-label="Final message">
+          <div class="agent" id="agentText">Excellent choice, Agent 🫡</div>
+          <div class="note">In all seriousness, I've had a great time getting to know you and I'm really looking forward to seeing you again!</div>
+        </div>
+      </section>
+
+      <div id="fadeOverlay" class="fade-overlay" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <script>
+    // Messages and timings
+    const lines = [
+      "Hello Ananya.",
+      "You have been selected for a very secretive mission.",
+      "Objective: Attend a covert (but very enjoyable) dinner rendezvous.",
+      "Authorization required. Press 'Proceed' to reveal the invitation."
+    ];
+
+    const terminalEl = document.getElementById('type-area');
+    const proceedBtn = document.getElementById('proceedBtn');
+    const pageTerminal = document.getElementById('page-terminal');
+    const pageLetter = document.getElementById('page-letter');
+    const pageFinal = document.getElementById('page-final');
+    const fadeOverlay = document.getElementById('fadeOverlay');
+    const letterEl = document.getElementById('letter');
+    const letterWrap = document.getElementById('letterWrap');
+    const acceptBtn = document.getElementById('acceptBtn');
+
+    // Typewriter effect for terminal
+    function typeLines(lines, el, cb){
+      let i=0;
+      function nextLine(){
+        if(i>=lines.length){ if(cb) cb(); return; }
+        const line = lines[i++];
+        const p = document.createElement('div');
+        el.appendChild(p);
+        typeString(line, p, 0, () => {
+          const br = document.createElement('div');
+          el.appendChild(br);
+          // small pause then next
+          setTimeout(nextLine, 500);
+        });
+      }
+      nextLine();
+    }
+
+    function typeString(str, node, idx, done){
+      if(idx>str.length){ done(); return; }
+      node.textContent = str.slice(0, idx);
+      const cursor = document.createElement('span');
+      cursor.className = 'cursor';
+      node.appendChild(cursor);
+      setTimeout(()=>{
+        cursor.remove();
+        typeString(str, node, idx+1, done);
+      }, 28 + Math.random()*40);
+    }
+
+    // initial type
+    typeLines(lines, terminalEl, ()=>{ /* done */ });
+
+    // Proceed button click -> fade and show letter
+    proceedBtn.addEventListener('click', async ()=>{
+      proceedBtn.disabled = true;
+      // small click feedback
+      fadeOverlay.classList.add('on');
+      await wait(650);
+      // show letter page
+      pageTerminal.classList.remove('visible');
+      pageLetter.classList.add('visible');
+      fadeOverlay.classList.remove('on');
+      // populate letter content with styled invitation
+      renderLetter();
+    });
+
+    function renderLetter(){
+      letterEl.innerHTML = `
+        <div style="margin-bottom:8px">Ananya,</div>
+        <div style="font-size:34px">You are cordially invited to a special evening.</div>
+        <div style="margin-top:16px;font-size:18px;font-family:Roboto;color:#333">
+          Place: Mala Tang Chinese & Hot Pot (3434 Washington Blvd, Arlington, VA 22201)
+        </div>
+        <div style="margin-top:8px;font-size:18px;font-family:Roboto;color:#333">
+          Time: Tuesday, February 17th @ 7:30pm
+        </div>
+        <div style="margin-top:8px;font-size:16px;font-family:Roboto;color:#555">
+          Dress Code: Whatever you want lol
+        </div>
+      `;
+    }
+
+    // Accept invitation -> whoosh off, then show final purple screen
+    acceptBtn.addEventListener('click', async ()=>{
+      acceptBtn.disabled = true;
+      // play whoosh by animating letterWrap to the right
+      letterWrap.classList.add('fly-right');
+      await wait(600);
+      pageLetter.classList.remove('visible');
+      // reveal final
+      pageFinal.classList.add('visible');
+    });
+
+    function wait(ms){ return new Promise(res=>setTimeout(res, ms)); }
+
+    // Accessibility: allow Enter key to activate main buttons
+    document.addEventListener('keydown', (e)=>{
+      if(e.key==='Enter'){
+        if(pageTerminal.classList.contains('visible')) proceedBtn.click();
+        else if(pageLetter.classList.contains('visible')) acceptBtn.click();
+      }
+    });
+
+    // Small responsive improvement: focus first button
+    proceedBtn.focus();
+  </script>
+</body>
+</html>
