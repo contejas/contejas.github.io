@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Newsletter Meditation Challenge</title>
+
+<style>
+  body{
+    margin:0;
+    background:#ffffff;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:#0a2540;
+    display:flex;
+    justify-content:center;
+    padding:40px 16px;
+  }
+
+  .container{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+  }
+
+  .timer{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    margin-bottom:10px;
+  }
+
+  h1{
+    margin:0;
+    font-size:26px;
+    letter-spacing:-0.02em;
+  }
+
+  .subtitle{
+    color:#425466;
+    margin:6px 0 28px;
+  }
+
+  .breathing-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:40px 0;
+  }
+
+  .box{
+    position:relative;
+    width:260px;
+    height:260px;
+    border:2px solid #0a2540;
+    border-radius:12px;
+  }
+
+  .dot{
+    position:absolute;
+    width:16px;
+    height:16px;
+    background:#0a2540;
+    border-radius:50%;
+    transform:translate(-50%, -50%);
+  }
+
+  .instruction{
+    font-size:22px;
+    font-weight:600;
+    margin-top:10px;
+  }
+
+  .secret{
+    display:none;
+    margin-top:24px;
+    padding:20px 24px;
+    background:#f6f9fc;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+  }
+
+  .secret a{
+    display:inline-block;
+    margin-top:8px;
+    color:#0a2540;
+    font-weight:700;
+    text-decoration:none;
+    border-bottom:1px solid #0a2540;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div id="timer" class="timer">02:00</div>
+
+  <h1>Newsletter Meditation Challenge</h1>
+  <p class="subtitle">
+    Complete a 2-minute guided box breathing session to unlock the newsletter.
+  </p>
+
+  <div class="breathing-area">
+    <div class="box">
+      <div id="dot" class="dot"></div>
+    </div>
+  </div>
+
+  <div id="instruction" class="instruction">Get ready...</div>
+
+  <div id="secret" class="secret">
+    You completed the meditation 🧘‍♂️<br><br>
+    <a href="./newsletter-31.pdf" target="_blank">
+      Continue to the Newsletter →
+    </a>
+  </div>
+
+</div>
+
+<iframe
+  width="0"
+  height="0"
+  src="https://www.youtube.com/embed/Z33ppdX37Ng?autoplay=1&loop=1&playlist=Z33ppdX37Ng"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+
+<script>
+(function(){
+
+  const dot = document.getElementById("dot");
+  const instructionEl = document.getElementById("instruction");
+  const timerEl = document.getElementById("timer");
+  const secret = document.getElementById("secret");
+
+  const BOX_SIZE = 260;
+  const SIDE_TIME = 3500; // 3.5 seconds per side
+  const TOTAL_TIME = 120; // 2 minutes
+
+  let startTime = performance.now();
+  let timeLeft = TOTAL_TIME;
+
+  function updateTimer(t){
+    const remaining = Math.max(0, TOTAL_TIME - Math.floor(t));
+    if(remaining !== timeLeft){
+      timeLeft = remaining;
+      const mins = Math.floor(timeLeft / 60);
+      const secs = timeLeft % 60;
+      timerEl.textContent =
+        `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+    }
+  }
+
+  function animate(now){
+    const elapsedSec = (now - startTime) / 1000;
+    updateTimer(elapsedSec);
+
+    if(timeLeft <= 0){
+      instructionEl.textContent = "Done";
+      secret.style.display = "block";
+      return;
+    }
+
+    const cycle = (now - startTime) % (SIDE_TIME * 4);
+    const side = Math.floor(cycle / SIDE_TIME);
+    const t = (cycle % SIDE_TIME) / SIDE_TIME;
+
+    let x=0, y=0;
+
+    if(side === 0){
+      x = t;
+      y = 0;
+      instructionEl.textContent = "Breathe In";
+    }
+    else if(side === 1){
+      x = 1;
+      y = t;
+      instructionEl.textContent = "Hold";
+    }
+    else if(side === 2){
+      x = 1 - t;
+      y = 1;
+      instructionEl.textContent = "Breathe Out";
+    }
+    else if(side === 3){
+      x = 0;
+      y = 1 - t;
+      instructionEl.textContent = "Hold";
+    }
+
+    dot.style.left = (x * BOX_SIZE) + "px";
+    dot.style.top = (y * BOX_SIZE) + "px";
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+
+})();
+</script>
+
+</body>
+</html>
