@@ -1,0 +1,347 @@
+/* ============================================================
+   TEJAS SHAH — ONE YEAR LOOKBACK
+   Font: Montserrat only
+   Palette: #36528b (blue), #0d0d0d (ink), #f5f3ee (cream), #fff
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue:    #36528b;
+  --blue-dk: #243a6b;
+  --ink:     #0d0d0d;
+  --cream:   #f5f3ee;
+  --white:   #ffffff;
+  --rule:    #c8c4bc;
+  --card-bg: #ffffff;
+  --funny-bg: #eef2f9;
+  --dot-size: 14px;
+  --line-width: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--cream);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  background: var(--ink);
+  color: var(--white);
+  padding: 80px 24px 72px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.hero-kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 22px;
+}
+
+.hero-name {
+  font-size: clamp(52px, 10vw, 96px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 18px;
+}
+
+.hero-sub {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 28px;
+}
+
+.hero-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.65);
+  max-width: 500px;
+  margin: 0 auto 18px;
+}
+
+.hero-scroll {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ============================================================
+   TIMELINE WRAPPER
+   ============================================================ */
+.timeline-wrap {
+  padding: 0 16px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-top: 56px;
+}
+
+/* Central vertical line — runs from top of timeline to top of end-cap */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 56px; /* matches .timeline-end padding-top so line stops at the circle */
+  width: var(--line-width);
+  background: var(--blue);
+  opacity: 0.2;
+  transform: translateX(-50%);
+}
+
+/* ============================================================
+   MONTH LABELS
+   ============================================================ */
+.month-label {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  margin: 52px 0 12px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.month-label span {
+  background: var(--blue);
+  color: var(--white);
+  padding: 5px 20px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   TIMELINE ENTRIES
+   ============================================================ */
+.entry {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.entry-right {
+  margin-left: 50%;
+  padding-left: 40px;
+}
+
+.entry-left {
+  margin-left: 0;
+  padding-right: 40px;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Dot */
+.entry-dot {
+  position: absolute;
+  top: 16px;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 50%;
+  background: var(--blue);
+  border: 2px solid var(--cream);
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.entry-right .entry-dot {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.entry-left .entry-dot {
+  right: 0;
+  transform: translateX(50%);
+}
+
+/* Milestone dot */
+.entry-dot.milestone {
+  width: 20px;
+  height: 20px;
+  top: 13px;
+  background: var(--blue-dk);
+  border-color: var(--cream);
+}
+
+.entry-right .entry-dot.milestone {
+  transform: translateX(-50%);
+}
+
+.entry-left .entry-dot.milestone {
+  transform: translateX(50%);
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: 3px;
+  padding: 14px 18px;
+  flex: 1;
+}
+
+.card-funny {
+  background: var(--card-bg);
+  border-color: rgba(0,0,0,0.07);
+}
+
+.card-milestone {
+  background: var(--blue);
+  border-color: transparent;
+}
+
+.card-milestone .entry-date {
+  color: rgba(255,255,255,0.55);
+}
+
+.card-milestone .entry-text {
+  color: var(--white);
+}
+
+.entry-date {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.entry-text {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.entry-text strong {
+  font-weight: 700;
+}
+
+/* ============================================================
+   TIMELINE END CAP
+   ============================================================ */
+.timeline-end {
+  text-align: center;
+  padding: 56px 0 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-end-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--blue);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.timeline-end-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.timeline-end-sub {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink);
+  opacity: 0.45;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  padding: 24px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   RESPONSIVE — single column on mobile
+   ============================================================ */
+@media (max-width: 640px) {
+  .timeline::before {
+    left: 18px;
+    transform: none;
+  }
+
+  .entry,
+  .entry-right,
+  .entry-left {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 48px;
+    padding-right: 0;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .entry-right .entry-dot,
+  .entry-left .entry-dot {
+    left: 11px;
+    right: auto;
+    transform: none;
+  }
+
+  .entry-right .entry-dot.milestone,
+  .entry-left .entry-dot.milestone {
+    left: 8px;
+    right: auto;
+    transform: none;
+  }
+}

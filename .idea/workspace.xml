@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a23aa6-3f78-4498-a526-a66f91125657" name="Default" comment="foodfinder stuff again">
+      <change afterPath="$PROJECT_DIR$/css/review.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -33,7 +35,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/tejas/Documents/GitHub/DentalMock"
+    "last_opened_file_path": "C:/Users/tejas/Documents/GitHub/DentalMock",
+    "list.type.of.created.stylesheet": "CSS"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -201,6 +204,9 @@
       <workItem from="1781747511984" duration="26000" />
       <workItem from="1782438647151" duration="1237000" />
       <workItem from="1782698951859" duration="794000" />
+      <workItem from="1783640402609" duration="665000" />
+      <workItem from="1784421907954" duration="19000" />
+      <workItem from="1784780013443" duration="85000" />
     </task>
     <task id="LOCAL-00001" summary="change me sum more">
       <created>1578528253713</created>
